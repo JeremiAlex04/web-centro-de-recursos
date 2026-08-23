@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #09090b;
+  --color-panel: #101014;
+  --color-card: #14141a;
+  --color-cardh: #1b1b23;
+  --color-line: #27272f;
+  --color-ink: #f4f4f5;
+  --color-mute: #a1a1aa;
+  --color-accent: #06b6d4;
+
+  --animate-fade-in: fade-in 0.16s ease both;
+  --animate-slide-up: slide-up 0.22s ease both;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { transform: translateY(14px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  color: var(--color-ink);
+  background-color: var(--color-night);
+  background-image:
+    radial-gradient(1100px 480px at 75% -10%, rgba(6, 182, 212, 0.13), transparent 60%),
+    radial-gradient(900px 420px at 8% 0%, rgba(56, 189, 248, 0.07), transparent 55%);
+}
